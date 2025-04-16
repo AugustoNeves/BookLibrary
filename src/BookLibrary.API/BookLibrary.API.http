@@ -1,0 +1,9 @@
+@BookLibrary.API_HostAddress = http://localhost:5012/api
+
+GET {{BookLibrary.API_HostAddress}}/books/search
+Accept: application/json
+
+###
+
+GET {{BookLibrary.API_HostAddress}}/books/search?title=The%20Great%20Gatsby
+Accept: application/json
