@@ -30,7 +30,7 @@
 
 ## About The Project
 
-This project is a **Full-Stack Book Library System** built with **.NET API**, **React (Vite)**, and **SQL Server**, containerized with **Docker Compose** for seamless deployment. It follows **Clean Architecture** principles and uses **MediatR** for handling commands and queries **(CQRS)** efficiently. The solution includes **TestContainers** for reliable, isolated end-to-end functional testing that ensures API functionality across environments.
+This project is a **Full-Stack Book Library System** built with **.NET 9.0 WEB API**, **React (Vite)**, and **SQL Server**, containerized with **Docker Compose** for seamless deployment. It follows **Clean Architecture** principles and uses **MediatR** for handling commands and queries **(CQRS)** efficiently. The project is designed to be easily extensible and maintainable, making it a great starting point for building robust applications.
 
 ### Built with
 
@@ -43,8 +43,8 @@ This project is a **Full-Stack Book Library System** built with **.NET API**, **
 Before running this project, ensure you have the following installed:
 
 **[Docker & Docker Compose](https://www.docker.com/get-started/)** – To run the entire stack in containers.  
-**[Node.js (20+)](https://nodejs.org/)** – Required for the frontend.  
-**[.NET SDK (9.0+)](https://dotnet.microsoft.com/en-us/download)** – To build and run the API manually.
+**[Node.js (20+)](https://nodejs.org/)** – Required for the frontend (optional).
+**[.NET SDK (9.0+)](https://dotnet.microsoft.com/en-us/download)** – To build and run the API manually (optional).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -107,5 +107,4 @@ cd backend/tests/Application.UnitTest
 ```sh
 dotnet test
 ```
-3. **View the Results**  
    
