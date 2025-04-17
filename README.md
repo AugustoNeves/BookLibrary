@@ -30,7 +30,8 @@
 
 ## About The Project
 
-This project is a **Full-Stack Book Library System** built with **.NET 9.0 WEB API**, **React (Vite)**, and **SQL Server**, containerized with **Docker Compose** for seamless deployment. It follows **Clean Architecture** principles and uses **MediatR** for handling commands and queries **(CQRS)** efficiently. The project is designed to be easily extensible and maintainable, making it a great starting point for building robust applications.
+This project is a **Full-Stack Book Library System** built with **.NET 9.0 WEB API**, **React (Vite)**, and **SQL Server**, containerized with **Docker Compose** for seamless deployment; it follows **Clean Architecture** principles, uses **MediatR** for handling commands and queries (**CQRS**), leverages **Entity Framework Core** for fluent and maintainable data access, and features a modern, responsive UI built with **Material UI**, making it a great starting point for building robust and extensible applications.
+
 
 ### Built with
 
@@ -64,6 +65,8 @@ cd BookLibrary
 ```sh
 docker-compose up -d --build
 ```
+
+
 
 ### 3. Navigate to the application
 
