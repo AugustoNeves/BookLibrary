@@ -32,7 +32,6 @@
 
 This project is a **Full-Stack Book Library System** built with **.NET 9.0 WEB API**, **React (Vite)**, and **SQL Server**, containerized with **Docker Compose** for seamless deployment; it follows **Clean Architecture** principles, uses **MediatR** for handling commands and queries (**CQRS**), leverages **Entity Framework Core** for fluent and maintainable data access, and features a modern, responsive UI built with **Material UI**, making it a great starting point for building robust and extensible applications.
 
-
 ### Built with
 
 [![.NET][.NET]][.NET-url] [![React][React.js]][React-url] [![Docker][Docker]][Docker-url][![MSSQL][MSSQL]][MSSQL-url]
@@ -43,8 +42,10 @@ This project is a **Full-Stack Book Library System** built with **.NET 9.0 WEB A
 
 Before running this project, ensure you have the following installed:
 
-**[Docker & Docker Compose](https://www.docker.com/get-started/)** – To run the entire stack in containers.  
+**[Docker & Docker Compose](https://www.docker.com/get-started/)** – To run the entire stack in containers.
+
 **[Node.js (20+)](https://nodejs.org/)** – Required for the frontend (optional).
+
 **[.NET SDK (9.0+)](https://dotnet.microsoft.com/en-us/download)** – To build and run the API manually (optional).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -65,8 +66,6 @@ cd BookLibrary
 ```sh
 docker-compose up -d --build
 ```
-
-
 
 ### 3. Navigate to the application
 
@@ -110,4 +109,3 @@ cd backend/tests/Application.UnitTest
 ```sh
 dotnet test
 ```
-   
