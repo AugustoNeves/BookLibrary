@@ -1,8 +1,8 @@
 export interface Book {
-  copiesInUse: ReactNode;
-  totalCopies: ReactNode;
-  firstName: ReactNode;
-  lastName: ReactNode;
+  copiesInUse: number;
+  totalCopies: number;
+  firstName: string;
+  lastName: string;
   title: string;
   publisher: string;
   author: string;

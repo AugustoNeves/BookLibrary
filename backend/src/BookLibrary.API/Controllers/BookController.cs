@@ -1,5 +1,4 @@
 ﻿using BookLibrary.Application.Features.Books.Queries;
-using BookLibrary.Domain.Entities;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 

@@ -1,6 +1,42 @@
 services:
+  booklibrary.db:
+    image: 'mcr.microsoft.com/mssql/server:2022-latest'
+    container_name: book-library-db
+    restart: always
+    environment:
+      SA_PASSWORD: 'YourStrong@Password'
+      ACCEPT_EULA: 'Y'
+    ports:
+      - '1433:1433'
+    volumes:
+      - booklibrary_data:/var/opt/mssql
   booklibrary.api:
-    image: ${DOCKER_REGISTRY-}booklibraryapi
+    container_name: api
     build:
       context: .
-      dockerfile: src/BookLibrary.API/Dockerfile
+      dockerfile: backend/src/BookLibrary.API/Dockerfile
+    depends_on:
+      - booklibrary.db
+    ports:
+      - '5000:8080'
+      - '5001:8081'
+    environment:
+      - ConnectionStrings__DefaultConnection=Server=booklibrary.db;Database=BookLibraryDB;User Id=sa;Password=YourStrong@Password;TrustServerCertificate=True
+      - ASPNETCORE_ENVIRONMENT=Development
+    restart: always
+
+  booklibrary.frontend:
+    container_name: frontend
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    environment:
+      - VITE_API_BASE_URL=http://localhost:5000/api
+    ports:
+      - '5173:5173'
+    depends_on:
+      - booklibrary.api
+    restart: always
+
+volumes:
+  booklibrary_data:
